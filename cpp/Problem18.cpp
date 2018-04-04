@@ -13,7 +13,7 @@ class Problem18
 		{
 			for (int j = 0; j <= i; ++j)
 			{
-				tr[i][j] = tr[i][j] + std::max(tr[i + 1][j], tr[i + 1][j + 1]);
+				tr[i][j] += std::max(tr[i + 1][j], tr[i + 1][j + 1]);
 			}
 		}
 
@@ -22,7 +22,7 @@ class Problem18
 
 	int **readTriangle()
 	{
-		int **tr= new int *[15];
+		int **tr = new int *[15];
 		std::ifstream inf("Problem18.in");
 		for (int i = 0; i < 15; i++)
 		{
